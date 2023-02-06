@@ -1,5 +1,3 @@
-import React from 'react'
-
 const BookTable = ({books}) => {
 
     if (books.length === 0) return null;
