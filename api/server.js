@@ -20,9 +20,8 @@ app.get('/api/books', (req, res) => {
 });
 
 app.post('/api/book', (req, res) => {
-  const book = req.body.book;
-  console.log('Adding book:::::', book);
-  books.push(book);
+  console.log('Adding book:::::', req.body.book);
+  books.push(req.body.book);
   res.json("book added");
 });
 
