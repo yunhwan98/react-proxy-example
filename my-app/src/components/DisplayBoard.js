@@ -1,5 +1,3 @@
-import React from 'react'
-
 const DisplayBoard = ({numberOfBooks, getAllBook}) => {
     
     return(
