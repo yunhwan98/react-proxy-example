@@ -1,5 +1,5 @@
-const BookTable = ({ books }) => {
-  if (books.length === 0) return null;
+const TodoTable = ({ todos }) => {
+  if (todos.length === 0) return null;
 
   return (
     <div className="table-wrapper">
@@ -10,19 +10,20 @@ const BookTable = ({ books }) => {
             <thead>
               <tr>
                 <th>Id</th>
-                <th>Book</th>
+                <th>Todo</th>
                 <th>Category</th>
-                <th>Author</th>
+                <th>isComplete</th>
               </tr>
             </thead>
             <tbody>
-              {books.map((book, index) => {
+              {todos.map((todo, index) => {
+                console.log(todo);
                 return (
                   <tr key={index} className={index % 2 === 0 ? "odd" : "even"}>
                     <td>{index + 1}</td>
-                    <td>{book.book}</td>
-                    <td>{book.category}</td>
-                    <td>{book.author}</td>
+                    <td>{todo.todo}</td>
+                    <td>{todo.category}</td>
+                    <td>{todo.isComplete ? "o" : "x"}</td>
                   </tr>
                 );
               })}
@@ -34,4 +35,4 @@ const BookTable = ({ books }) => {
   );
 };
 
-export default BookTable;
+export default TodoTable;
